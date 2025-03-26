@@ -21,7 +21,7 @@ def copiar_al_portapapeles():
 # Crear ventana
 ventana = tk.Tk()
 ventana.title("Generador de Contraseñas")
-ventana.geometry("300x300")
+ventana.geometry("300x150")
 
 # Etiqueta
 tk.Label(ventana, text="Contraseña Generada:").pack(pady=5)
