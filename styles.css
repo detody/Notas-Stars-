@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff8e7;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.menu-btn, .settings-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Change menu button to plus sign */
+.menu-btn::before {
+  content: '+';
+  font-weight: bold;
+}
+
+.search-box {
+  width: 50%;
+  padding: 5px;
+}
+
+/* Main Panel */
+.main-panel {
+  padding: 20px;
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+/* Note Section */
+.note {
+  border: 2px solid #ccc;
+  padding: 15px;
+  background-color: #fff;
+  width: 500px;
+  height: 500px;
+  resize: none;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  cursor: move;
+  overflow: hidden;
+}
+
+.note-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.note-toolbar button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.note-toolbar select {
+  padding: 5px;
+}
+
+.note-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 5px;
+}
+
+.save-btn {
+  background-color: green;
+  color: white;
+}
+
+.minimize-btn {
+  background-color: blue;
+  color: white;
+}
+
+.close-btn {
+  background-color: red;
+  color: white;
+}
+
+.note-content {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.saved-notes {
+  margin-top: 30px;
+}
+
+.saved-notes {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.saved-note {
+  background-color: #a3e4d7;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 95%;
+}
+
+/* Minimized Notes Section */
+.minimized-notes {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  padding: 8px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.minimized-note {
+  padding: 8px 12px;
+  margin-right: 10px;
+  background-color: #f9e79f;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas star 🌟</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra Superior -->
+  <header class="top-bar">
+    <button class="add-btn">&#9776;</button>
+    <input type="text" placeholder="Buscar palabra..." class="search-box">
+    <button class="config-btn">&#9881;</button>
+  </header>
+
+  <!-- Panel principal -->
+  <main class="main-panel">
+
+    <!-- Nota -->
+    <section class="note">
+      <div class="note-toolbar">
+        <!-- Editor de letra -->
+        <button>B</button>
+        <button><i>C</i></button>
+        <button><u>U</u></button>
+
+        <!-- Fuente -->
+        <select>
+          <option>Arial</option>
+          <option>Verdana</option>
+        </select>
+
+        <!-- Tamaño de letra -->
+        <select>
+          <option>12px</option>
+          <option>14px</option>
+          <option>16px</option>
+          <option>18px</option>
+        </select>
+
+        <!-- Botones de control -->
+        <div class="note-controls">
+          <button class="save-btn">&#128190;</button>
+          <button class="minimize-btn">&#9472;</button>
+          <button class="close-btn">&#10006;</button>
+        </div>
+      </div>
+      <textarea class="note-content" placeholder="Escribe tu nota..."></textarea>
+    </section>
+
+    <!-- Panel de notas guardadas -->
+    <section class="saved-notes">
+      <h3>Notas Guardadas</h3>
+      <div class="saved-note">Nota 1</div>
+      
+    </section>
+
+    <!-- Panel de notas minimizadas -->
+    <section class="minimized-notes">
+      <button class="minimized-note">Nota 1</button>
+    
+    </section>
+
+  </main>
+
+</body>
+</html>
