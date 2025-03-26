@@ -8,6 +8,10 @@ body {
   position: relative;
 }
 
+.btn-1 {
+  display: block;
+}
+
 /* Top Bar */
 .top-bar {
   display: flex;
@@ -22,12 +26,6 @@ body {
   border: none;
   font-size: 28px;
   cursor: pointer;
-}
-
-/* Change menu button to plus sign */
-.menu-btn::before {
-  content: '+';
-  font-weight: bold;
 }
 
 .search-box {
