@@ -153,39 +153,4 @@ body {
   font-weight: bold;
 }
 
-.config-menu {
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 50px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  padding: 10px;
-  z-index: 100;
-}
-
-.config-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.config-menu ul li {
-  padding: 8px;
-}
-
-.config-menu ul li button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  padding: 5px;
-}
-
-.config-menu ul li button:hover {
-  background: #f0f0f0;
-}
 
