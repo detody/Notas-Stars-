@@ -8,10 +8,6 @@ body {
   position: relative;
 }
 
-.btn-1 {
-  display: block;
-}
-
 /* Top Bar */
 .top-bar {
   display: flex;
@@ -21,12 +17,21 @@ body {
   padding: 10px;
 }
 
-.menu-btn, .settings-btn {
+.add-btn{
+  display: inline-flex;
+  width: 10px;
+  padding: 15px;
+  cursor: pointer;
+
+}
+
+.settings-btn {
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
 }
+
 
 .search-box {
   width: 50%;
