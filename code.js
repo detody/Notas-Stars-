@@ -46,14 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
             minNote.classList.add("minimized-note");
             minNote.textContent = "Nota Minimizada";
             minimizedPanel.appendChild(minNote);
-            textArea.style.display = "none"; // Ocultar el textarea
+            mainPanel.style.display = "none"; // Oculta la nota
         }
     });
 
     // Cerrar nota
     closeBtn.addEventListener("click", () => {
-        textArea.value = "";
-        textArea.style.display = "none"; // Ocultar el textarea
+        mainPanel.style.display = "none"; // Oculta la nota
     });
 
     // Hacer que el panel se pueda mover

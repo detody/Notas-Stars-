@@ -7,7 +7,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-
 /* Top Bar */
 .top-bar {
   display: flex;
@@ -16,7 +15,6 @@ body {
   background-color: #ffffff;
   padding: 10px;
 }
-
 .add-btn{
   display: inline-flex;
   width: 10px;
@@ -24,14 +22,12 @@ body {
   cursor: pointer;
 
 }
-
 .settings-btn {
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
 }
-
 
 .search-box {
   width: 50%;
@@ -59,6 +55,7 @@ body {
   left: 50px;
   cursor: move;
   overflow: hidden;
+  z-index: 10; /* La nota activa queda siempre por encima */
 }
 
 .note-toolbar {
@@ -97,7 +94,6 @@ body {
   background-color: red;
   color: white;
 }
-
 .note-content {
   width: 100%;
   height: 150px;
@@ -110,19 +106,19 @@ body {
 .saved-notes {
   margin-top: 30px;
 }
-
 .saved-notes {
   position: absolute;
-  bottom: 70px;
+  bottom: 120px; /* Espacio para no tocar las minimizadas */
   left: 0;
   width: 100%;
-
+  background-color: #d5f5e3;
   padding: 10px;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap; /* Permite que las notas se acomoden en varias líneas */
+  z-index: 5; /* Se mantiene debajo de la nota activa */
 }
+
 
 .saved-note {
   background-color: #a3e4d7;
@@ -134,16 +130,17 @@ body {
 
 /* Minimized Notes Section */
 .minimized-notes {
-  position: absolute;
-  bottom: 20px;
+  position: fixed; /* Fijo para que siempre esté visible */
+  bottom: 10px; /* Lo acercamos al borde */
   left: 0;
   width: 100%;
+  background-color: #f4d03f;
+  padding: 8px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #ffffff;
-  padding: 8px;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 10; /* Asegura que esté por encima de otras secciones */
 }
 
 .minimized-note {
