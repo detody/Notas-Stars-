@@ -7,6 +7,7 @@ body {
   overflow: hidden;
   position: relative;
 }
+
 /* Top Bar */
 .top-bar {
   display: flex;
@@ -15,18 +16,24 @@ body {
   background-color: #ffffff;
   padding: 10px;
 }
+
 .add-btn{
   display: inline-flex;
   width: 10px;
   padding: 15px;
   cursor: pointer;
-
 }
+
 .settings-btn {
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.settings-btn:hover {
+  opacity: 0.8;
 }
 
 .search-box {
@@ -55,7 +62,6 @@ body {
   left: 50px;
   cursor: move;
   overflow: hidden;
-  z-index: 10; /* La nota activa queda siempre por encima */
 }
 
 .note-toolbar {
@@ -68,6 +74,11 @@ body {
 .note-toolbar button {
   padding: 5px 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note-toolbar button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .note-toolbar select {
@@ -94,6 +105,7 @@ body {
   background-color: red;
   color: white;
 }
+
 .note-content {
   width: 100%;
   height: 150px;
@@ -103,22 +115,22 @@ body {
   outline: none;
 }
 
+/* Saved Notes Section */
 .saved-notes {
   margin-top: 30px;
 }
+
 .saved-notes {
   position: absolute;
-  bottom: 120px; /* Espacio para no tocar las minimizadas */
+  bottom: 70px;
   left: 0;
   width: 100%;
-  background-color: #d5f5e3;
   padding: 10px;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   display: flex;
-  flex-wrap: wrap; /* Permite que las notas se acomoden en varias líneas */
-  z-index: 5; /* Se mantiene debajo de la nota activa */
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 
 .saved-note {
   background-color: #a3e4d7;
@@ -130,17 +142,16 @@ body {
 
 /* Minimized Notes Section */
 .minimized-notes {
-  position: fixed; /* Fijo para que siempre esté visible */
-  bottom: 10px; /* Lo acercamos al borde */
+  position: absolute;
+  bottom: 20px;
   left: 0;
   width: 100%;
-  background-color: #f4d03f;
-  padding: 8px;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  z-index: 10; /* Asegura que esté por encima de otras secciones */
+  background-color: #ffffff;
+  padding: 8px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
 
 .minimized-note {
@@ -151,6 +162,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-
+.minimized-note:hover {
+  background-color: #f7dc6f;
+}

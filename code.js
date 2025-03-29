@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const minimizedPanel = document.querySelector(".minimized-notes");
 
     // Aplicar estilos al texto seleccionado
+    // Nota: document.execCommand está en desuso; considera alternativas a futuro.
     boldBtn.addEventListener("click", () => document.execCommand("bold"));
     italicBtn.addEventListener("click", () => document.execCommand("italic"));
     underlineBtn.addEventListener("click", () => document.execCommand("underline"));
@@ -46,13 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
             minNote.classList.add("minimized-note");
             minNote.textContent = "Nota Minimizada";
             minimizedPanel.appendChild(minNote);
-            mainPanel.style.display = "none"; // Oculta la nota
+            textArea.style.display = "none"; // Ocultar el textarea
+
+            // Agregar funcionalidad para restaurar la nota al hacer clic
+            minNote.addEventListener("click", () => {
+                textArea.style.display = "block";
+                textArea.focus();
+                minimizedPanel.removeChild(minNote);
+            });
         }
     });
 
     // Cerrar nota
     closeBtn.addEventListener("click", () => {
-        mainPanel.style.display = "none"; // Oculta la nota
+        textArea.value = "";
+        textArea.style.display = "block"; // Mostrar el textarea para poder escribir una nueva nota
     });
 
     // Hacer que el panel se pueda mover
